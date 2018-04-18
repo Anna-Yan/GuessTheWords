@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context="com.example.nout.guessthewords.MainActivity">
+
+
+
+    <Button
+        android:id="@+id/soundButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onClick"
+        android:background="@mipmap/on"
+        app:layout_constraintHorizontal_bias="0.991"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/groupeLinLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:alpha="0.9"
+        android:background="@android:drawable/toast_frame"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:text="• C H O O S E   C A T E G O R Y •"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="serif"
+                tools:text=" " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonsLinLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/scienceButton"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/science_icon"
+                android:gravity="bottom|center_vertical|center_horizontal"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/background_light"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/artButton"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/music_art_icon"
+                android:gravity="bottom|center_vertical|center"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@+id/scienceButton" />
+
+            <Button
+                android:id="@+id/animalButton"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/animal_icon"
+                android:gravity="bottom|center_vertical|center_horizontal|center"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@+id/artButton" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/textsLinLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/scienceTV"
+                android:layout_width="0dp"
+                android:layout_height="57dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="0dp"
+                android:layout_weight="1"
+                android:text="Science &amp; More"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/artTV"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/artTV"
+                android:layout_width="0dp"
+                android:layout_height="57dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:text="Art &amp; Music"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/scienceTV"
+                app:layout_constraintRight_toLeftOf="@+id/natureTV" />
+
+            <TextView
+                android:id="@+id/natureTV"
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:text="Nature &amp; Animals"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
